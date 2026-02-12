@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Fareed Zarii House | Handcrafted Luxury</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src=""></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#" class="logo">AL FAREED ZARII HOUSE</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#process">The Process</a></li>
+            <li><a href="#order">Custom Order</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <section id="home" class="hero visible" style="opacity:1; transform:none;">
+        <h1>Handcrafted Luxury Zarii Designs</h1>
+        <p>Zarri House — Where Golden Threads Tell Stories of Elegance.</p>
+        <div>
+            <a href="#collection" class="btn btn-gold">View Collection</a>
+            <a href="#order" class="btn btn-outline">Order Custom Design</a>
+        </div>
+    </section>
+
+    <section id="collection">
+        <div class="section-title">
+            <h2>Featured Collection</h2>
+        </div>
+        <div class="collection-grid">
+            <div class="card" onclick="openModal('/asset/1.jpg.jpeg')">
+                <div class="card-img"><img src="/asset/1.jpg.jpeg" alt="Zari Saree"></div>
+                <div class="card-info">
+                    <h3>Royal Maroon Saree</h3>
+                    <p>Pure Silk with Gold Zarii Work</p>
+                    <a href="#" class="btn btn-outline" style="padding: 5px 15px; margin-top:10px;">Enquire</a>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('/asset/2.jpg.jpeg')">
+                <div class="card-img"><img src="/asset/2.jpg.jpeg" alt="Bridal Lehengha"></div>
+                <div class="card-info">
+                    <h3>Golden Bridal Veil</h3>
+                    <p>Intricate Handmade Patterns</p>
+                    <a href="#" class="btn btn-outline" style="padding: 5px 15px; margin-top:10px;">Enquire</a>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('asset/3.jpg.jpeg')">
+                <div class="card-img"><img src="asset/3.jpg.jpeg" alt="Embroidered Fabric"></div>
+                <div class="card-info">
+                    <h3>Vintage Zardosi</h3>
+                    <p>Traditional Hand Embroidery</p>
+                    <a href="#" class="btn btn-outline" style="padding: 5px 15px; margin-top:10px;">Enquire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <div class="section-title">
+            <h2>Our Crafting Process</h2>
+        </div>
+        <div class="process-container">
+            <div class="process-step">
+                <i class="fas fa-pen-nib"></i>
+                <h3>Design Selection</h3>
+                <p>We start by sketching intricate patterns inspired by Mughal and Persian art.</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-hand-sparkles"></i>
+                <h3>Hand Crafting</h3>
+                <p>Skilled artisans spend hundreds of hours stitching fine gold threads.</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-check-circle"></i>
+                <h3>Quality Finish</h3>
+                <p>Every piece undergoes rigorous inspection to ensure royal standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="custom-order" style="text-align: center;">
+        <div class="section-title">
+            <h2 style="color: var(--gold);">Custom Royal Designs</h2>
+        </div>
+        <div
+            style="max-width: 700px; margin: 0 auto; padding: 40px; background: rgba(0,0,0,0.2); border: 1px solid var(--gold); border-radius: 34px;">
+            <i class="fab fa-whatsapp" style="font-size: 4rem; color: #25D366; margin-bottom: 20px;"></i>
+            <h3 style="color: var(--white); margin-bottom: 15px;">Consult with our Master Artisan</h3>
+            <p style="margin-bottom: 30px; color: var(--cream);">Have a specific design in mind? Click the button below
+                to share your requirements, reference images, or sketches directly with us on WhatsApp for a
+                personalized quote.</p>
+
+            <a href="https://wa.me/923007591986?text=Hello%20Al%20Fareed%20Zari%20House,%20I%20am%20interested%20in%20a%20custom%20Zari%20design."
+                target="_blank" class="btn btn-gold" style="display: inline-flex; align-items: center; gap: 10px;">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="about" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+        <div style="flex: 1; min-width: 300px;">
+            <img src="asset/4.jpg.jpeg" alt="About Us" class="vinta"
+                style="width: 100%; border: 10px solid var(--white); box-shadow: 10px 10px 0 var(--gold);">
+        </div>
+        <div style="flex: 1; min-width: 300px; ">
+            <h2 style="font-family: 'Cinzel'; color: var(--maroon); margin-bottom: 20px;">Our Heritage</h2>
+            <p style="font-size: 18px;">
+            <p>
+                Founded in 1980, Al Fareed Zarii House became a symbol of excellence in traditional Zarii craftsmanship,
+                creating unique bridal dresses, groom attire, and elegant Zarii designs.
+
+                Under the visionary leadership of <b>Mian Muhammad Saeed Sidhu</b>,
+                the foundation of quality, precision, and royal artistry was established.
+
+                Alongside him, his son <b>Muhammad Ahsan Saeed (Late)</b> played a vital role in strengthening and
+                preserving
+                the heritage of fine craftsmanship, ensuring that the legacy continued with dedication and passion.
+
+                Today, the responsibility of Al Fareed Zarii House has been proudly handed over to
+                <b>Muhammad Mohsin Saeed</b> and <b>Muhammad Sufyan Saeed</b>
+                who continue this proud legacy by blending traditional techniques with modern elegance —
+                serving generations with timeless, handcrafted luxury.
+            </p>
+
+            <p style="margin-top: 15px;">Each thread we weave tells a story of royalty, patience, and unparalleled
+                skill.</p>
+        </div>
+    </section>
+
+    <section id="contact" style="background: #f0f0f0;">
+        <div class="section-title">
+            <h2>Visit Our Boutique</h2>
+        </div>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center;">
+            <div>
+                <i class="fas fa-map-marker-alt" style="color:var(--maroon); font-size: 2rem;"></i>
+                <p style="margin-top:10px;"><a
+                        href="https://www.google.com/maps/place/AL-Fareed+Zarri+House/@30.158375,72.6823108,17z/data=!3m1!4b1!4m6!3m5!1s0x393cdfff8f037ad5:0x89a83e94fc02e2f2!8m2!3d30.158375!4d72.6848857!16s%2Fg%2F11q8xbpf8f?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
+                        style="text-decoration: none;color: black;">Shop No 86 M Block Burewala <br>(Imam-Bargah Road)
+                </p></a>
+            </div>
+            <div>
+                <i class="fab fa-whatsapp" style="color:#25D366; font-size: 2rem;"></i>
+                <p style="margin-top:10px;">+923007591986</p>
+                <p style="margin-top:10px;">+923146004040</p>
+            </div>
+            <div>
+                <i class="fab fa-instagram" style="color:var(--maroon); font-size: 2rem;"></i>
+                <p style="margin-top:10px;">al_fareed_804</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo" style="margin-bottom: 20px;">AL FAREED ZARII HOUSE</div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/al_fareed_804"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1DRSf81xyg/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.pinterest.com/al_fareed_804/"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Al Fareed Zarii House. All Rights Reserved. Crafted for Royalty.
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal" onclick="this.style.display='none'">
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Smooth Scrolling for Nav Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Image Modal Preview
+        function openModal(src) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("img01");
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        // Form Validation & Submission
+        document.getElementById('orderForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert("Thank you! Your custom order request has been sent. Our master artisan will contact you shortly.");
+            this.reset();
+        });
+
+        // Corrected Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
+
+        // 1. Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // 2. Close menu when a link is clicked (important for mobile UX)
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

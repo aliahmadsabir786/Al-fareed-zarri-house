@@ -10,7 +10,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src=""></script>
     <style>
     </style>
 </head>
@@ -220,24 +219,17 @@
             modalImg.src = src;
         }
 
-        // Form Validation & Submission
-        document.getElementById('orderForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert("Thank you! Your custom order request has been sent. Our master artisan will contact you shortly.");
-            this.reset();
-        });
-
-        // Corrected Mobile Menu Toggle
+        // Mobile Menu Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         const navItems = document.querySelectorAll('.nav-links li a');
 
-        // 1. Toggle menu when hamburger is clicked
+        // Toggle menu when hamburger is clicked
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
 
-        // 2. Close menu when a link is clicked (important for mobile UX)
+        // Close menu when a link is clicked (important for mobile UX)
         navItems.forEach(item => {
             item.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -245,6 +237,5 @@
         });
     </script>
 </body>
-
 
 </html>

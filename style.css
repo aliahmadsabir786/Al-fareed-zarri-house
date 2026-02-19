@@ -7,6 +7,7 @@
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -84,7 +85,7 @@ nav {
 /* --- Hero Section --- */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('homee2.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/asset/homee2.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,6 +118,7 @@ nav {
     margin: 10px;
     display: inline-block;
     border-radius: 10px;
+    min-width: 120px; /* Ensure buttons are touch-friendly */
 }
 
 .btn-gold {
@@ -237,6 +239,75 @@ section.visible {
     text-align: center;
 }
 
+/* ===== Ramadan Popup ===== */
+.ramadan-popup-overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    opacity:0;
+    visibility:hidden;
+    transition: all 0.4s ease;
+}
+
+.ramadan-popup-overlay.active{
+    opacity:1;
+    visibility:visible;
+    display: flex;
+}
+
+.ramadan-popup{
+    background: linear-gradient(135deg,#410303,#000);
+    border:2px solid #5e5d5d;
+    padding:40px 30px;
+    max-width:420px;
+    width:90%;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 0 40px rgba(8, 8, 7, 0.6);
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+    position:relative;
+}
+
+.ramadan-popup-overlay.active .ramadan-popup{
+    transform: scale(1);
+}
+
+.ramadan-popup h2{
+    font-family:'Cinzel';
+    color:#b8860b;
+    margin-bottom:15px;
+}
+
+.ramadan-popup h1{
+    font-size:40px;
+    color:#fff;
+    margin:10px 0;
+}
+
+.ramadan-popup p{
+    color:#eee;
+    margin-bottom:20px;
+}
+
+.ramadan-close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:22px;
+    cursor:pointer;
+    color:#fff;
+}
+
+
+
 .process-step {
     flex: 1;
     min-width: 250px;
@@ -274,6 +345,7 @@ section.visible {
     border: 1px solid var(--gold);
     color: white;
     outline: none;
+    font-size: 1rem;
 }
 
 ::placeholder {
@@ -333,35 +405,48 @@ footer {
         opacity: 0;
         transform: translateY(-30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Tablet adjustments */
     .hero h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
-
-    section {
-        padding: 50px 5%;
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+    .collection-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .card-img {
+        height: 300px;
+    }
+    .process-step {
+        min-width: 200px;
+        padding: 15px;
+    }
+    .process-step i {
+        font-size: 2.5rem;
     }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-
+    /* Mobile adjustments */
+    nav {
+        padding: 1rem 2%;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
     .nav-links {
         position: absolute;
         top: 100%;
@@ -374,25 +459,112 @@ footer {
         padding: 20px 0;
         border-top: 2px solid var(--gold);
     }
-
     .nav-links li {
         margin: 15px 0;
     }
-
     .nav-links.active {
         display: flex;
     }
-
     .hamburger {
         display: block;
     }
-
-    .hero h1 {
-        font-size: 2rem;
+    .hero {
+        height: 80vh;
+        padding: 0 10px;
     }
-
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
     section {
         padding: 50px 5%;
     }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .collection-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        gap: 20px;
+    }
+    .card-img {
+        height: 250px;
+    }
+    .card-info {
+        padding: 15px;
+    }
+    .card-info h3 {
+        font-size: 1.1rem;
+    }
+    .process-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .process-step {
+        min-width: 100%;
+        padding: 20px 10px;
+    }
+    .process-step i {
+        font-size: 2rem;
+    }
+    .order-form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .order-form input,
+    .order-form textarea {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+    footer {
+        padding: 30px 5% 15px;
+    }
+    .social-links a {
+        font-size: 1.3rem;
+        margin: 0 10px;
+    }
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
+}
 
+@media (max-width: 480px) {
+    /* Very small screens */
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        min-width: 80px;
+    }
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    .card-img {
+        height: 200px;
+    }
+    .card-info h3 {
+        font-size: 1rem;
+    }
+    .process-step i {
+        font-size: 1.8rem;
+    }
+    .social-links a {
+        font-size: 1.2rem;
+        margin: 0 8px;
+    }
 }
